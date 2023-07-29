@@ -2,12 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  color: #bbb;
-  background-color: #111;
-}
+
 
 .navcolor{
   color: inherit;
   text-decoration: none;
+}
+
+.light {
+  background-color: white;
+  color: #111;
+}
+
+.dark {
+  background-color: #111;
+  color: #bbb;
+}
+
+.theme{
+  transition: 1s all ease;
 }
