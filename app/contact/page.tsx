@@ -3,6 +3,13 @@ import { Wrapper } from '../Components/Shared/Wrapper'
 import Image from 'next/image'
 import ContactImg from "@/app/Components/Assets/contact.png"
 import Button from '../Components/Shared/Button'
+
+export const metadata = {
+    title: 'Contact Us',
+    description: 'This is our Company Contact Page',
+  }
+
+  
 const Contact = () => {
     return (
         <>

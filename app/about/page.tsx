@@ -1,6 +1,13 @@
 import React from 'react'
 import { Wrapper } from '../Components/Shared/Wrapper'
 import Image from 'next/image'
+
+
+export const metadata = {
+    title: 'About Us',
+    description: 'Our Company Wbesite Created by Mr. Ahsan Raza',
+  }
+
 const About = () => {
     return (
         <>
