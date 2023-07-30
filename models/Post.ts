@@ -1,8 +1,6 @@
-import mongoose from "mongoose";
+import mongoose, {Schema} from "mongoose";
 
-const { Schema } = mongoose;
-
-const postSchema: any = new Schema({
+const postSchema = new Schema({
   title: {
     type: String,
     required: true,
@@ -11,7 +9,7 @@ const postSchema: any = new Schema({
     type: String,
     required: true,
   },
-  img:{
+  image:{
     type: String,
     required: true,
   },
