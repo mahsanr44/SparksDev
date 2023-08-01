@@ -27,7 +27,7 @@ const Register = () => {
                     name, email, password
                 }),
             });
-            res.status === 201 && router.push('/dashboard/login?success=Account Created Successfully')
+            res.status === 200 && router.push('/dashboard/login')
         } catch (error) {
             setErr(true)
 

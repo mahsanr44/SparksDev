@@ -3,11 +3,14 @@ import dbConnect from "@/utils/db";
 import { NextRequest, NextResponse } from "next/server";
 
 export const GET = async (request: NextRequest) => {
+  const url = new URL(request.url);
+  const username:any = url.searchParams.get("username");
   try {
     console.log("CONNECTING MONGO");
     await dbConnect();
     console.log("CONNECTED MONGO");
-    const posts: any = await Post.find();
+   
+    const posts: any = await Post.find(username && { username });
     console.log("POSTS Fecthed");
     return NextResponse.json({
       success: posts,

@@ -4,8 +4,10 @@ import React, { useState } from 'react'
 import { AlignJustify } from 'lucide-react';
 import Button from '../Shared/Button';
 import DarkModeToggle from '../Widgets/DarkModeToggle';
+import { signOut, useSession } from 'next-auth/react';
 
 const DynamicMenu = () => {
+  const session = useSession()
   let allLinks = [
     { name: " Home", link: "/" },
     { name: "Portfolio", link: "/portfolio" },
@@ -23,16 +25,20 @@ const DynamicMenu = () => {
       </div>
 
       <ul className={` lg:space-x-8 md:space-x-7  md:bg-transparent  md:mr-0  md:flex md:items-center md:pb-0 pb-12 absolute md:static  md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 ' : 'top-[-490px]'}`}>
- <DarkModeToggle/>
+        <DarkModeToggle />
         {
           allLinks.map((item) => (
             <li key={item.name}  >
-              <Link  href={item.link}>{item.name}</Link>
+              <Link href={item.link}>{item.name}</Link>
             </li>
           ))
         }
-       
-      <Button txt={'Logout'}/>
+        {
+          session.status==='authenticated' &&
+        <button className='bg-primary  text-white py-1.5 font-semibold rounded-sm font-sans px-4 overflow-hidden' onClick={() => signOut()}>
+          Logout
+        </button>
+        }
       </ul>
     </div>
   )
