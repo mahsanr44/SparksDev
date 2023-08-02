@@ -35,9 +35,15 @@ const DynamicMenu = () => {
         }
         {
           session.status==='authenticated' &&
-        <button className='bg-primary  text-white py-1.5 font-semibold rounded-sm font-sans px-4 overflow-hidden' onClick={() => signOut()}>
+        <button className='bg-red-500  text-white py-1.5 font-semibold rounded-sm font-sans px-4 overflow-hidden' onClick={() => signOut()}>
           Logout
         </button>
+        }
+        {
+          session.status==='unauthenticated' &&
+        <Link className='bg-primary  text-white py-1.5 font-semibold rounded-sm font-sans px-4 overflow-hidden' href={'/dashboard/register'} >
+          Register
+        </Link>
         }
       </ul>
     </div>

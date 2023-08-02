@@ -1,7 +1,6 @@
 import { Wrapper } from '@/app/Components/Shared/Wrapper'
 import Image from 'next/image'
 import React from 'react'
-import AppImg from "@/app/Components/Assets/apps.jpg"
 import AhsanImg from "@/app/Components/Assets/ahsan.jpg"
 import { notFound } from 'next/navigation'
 
@@ -68,7 +67,7 @@ const BlogPost = async ({ params }: { params: { id: string } }) => {
               </div>
             </div>
             <div className='w-[1600px] h-56'>
-              <Image className='object-cover w-[1600px] h-56' height={200} width={200} src={AppImg} alt='Blog IMG' />
+              <Image className='object-cover w-[1600px] h-56' height={200} width={200} src={data.image} alt='Blog IMG' />
             </div>
           </div>
           <div>

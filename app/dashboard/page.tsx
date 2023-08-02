@@ -52,7 +52,7 @@ const Dashboard = () => {
   }
   const handleDelete = async (id: string) => {
     try {
-      await fetch(`/api/posts/${id}`, {
+      await fetch(`http://localhost:3000/api/posts/${id}`, {
         method: "DELETE",
       });
       mutate();
@@ -73,7 +73,7 @@ const Dashboard = () => {
               {isLoading ? "loading"
                 : data ?
                   (
-                    data?.success.map((item: any) => (
+                    data?.success?.map((item: any) => (
                       <div key={item._id} className='flex items-center space-x-5'>
                         <div className='flex-col  justify-center items-center space-y-5'>
                           <h2 className='font-bold text-3xl'>{item.title}</h2>
