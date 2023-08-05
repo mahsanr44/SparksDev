@@ -14,10 +14,10 @@ const About = () => {
             <Wrapper>
                 <div className='mx-32 mt-20'>
                     <div className='relative flex justify-center'>
-                        <div className=' bg-slate-200 w-full h-72 '>
+                        <div className='  w-full h-72 '>
                             <Image className='grayscale object-cover h-72 w-full' src={"https://images.pexels.com/photos/3194521/pexels-photo-3194521.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"} alt='About us' height={150} width={500} />
                         </div>
-                        <div className='absolute p-1 top-52  mr-[490px] flex items-baseline  flex-col  bg-primary text-white'>
+                        <div className='absolute p-1 top-52 mr-[490px] flex items-baseline  flex-col  bg-primary text-white'>
                             <h1 className='font-extrabold text-2xl'>Digital Storytellers</h1>
                             <h2 className='font-bold text-xl'>
                                 Handcrafting award winning digital experiences

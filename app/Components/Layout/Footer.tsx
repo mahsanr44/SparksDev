@@ -10,7 +10,7 @@ const Footer = () => {
                     <div>
                         <div className="max-w-fit">
                             <Link href={"/"} >
-                                <h3 className="font-sans  font-bold  mb-6"> AhsanR </h3>
+                                <h3 className="font-sans  font-bold  mb-6"> SparksDev </h3>
                             </Link>
                         </div>
                         <div className="flex  mb-5 border  w-fit">

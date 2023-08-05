@@ -10,7 +10,7 @@ const Navbar = async () => {
             <Wrapper>
                 <div className=' py-5 mx-10 flex justify-between items-center'>
                     <Link href={"/"}>
-                        <h3 className="font-sans  font-bold  "> AhsanR </h3>
+                        <h3 className="font-sans  font-bold  "> SparksDev </h3>
                     </Link>
                     <ul className="flex lg:space-x-12 md:space-x-7  mr-10 md:mr-0 ">
                        <DynamicMenu/>
